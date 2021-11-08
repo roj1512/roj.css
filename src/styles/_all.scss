@@ -1,13 +1,11 @@
-* {
-  box-sizing: border-box;
-  transition-duration: 0.25s;
-}
+@use "./layout/layout";
+@use "./typography/typography";
+@use "./elements/elements";
+@use "./forms/forms";
 
-*:disabled {
-  opacity: 0.5;
-}
-
-*:not(h1, h2, h3, h4, h5, h6, pre, code, kbd) {
-  font-family: inherit;
-  font-size: inherit;
+@mixin use($rtl: false) {
+  @include layout.use($rtl);
+  @include typography.use($rtl);
+  @include elements.use($rtl);
+  @include forms.use($rtl);
 }

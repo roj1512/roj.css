@@ -1,0 +1,5 @@
+@use "./inputs";
+
+@mixin use($rtl: false) {
+  @include inputs.use($rtl);
+}

@@ -1,0 +1,8 @@
+@use "./p";
+@use "./a";
+@use "./blockquote";
+@use "./pre";
+
+@mixin use($rtl: false) {
+  @include blockquote.use($rtl);
+}

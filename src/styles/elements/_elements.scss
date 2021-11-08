@@ -1,0 +1,5 @@
+@use "./button";
+
+@mixin use($rtl: false) {
+  @include button.use($rtl);
+}

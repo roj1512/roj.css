@@ -1,0 +1,9 @@
+@use "./asterisk";
+@use "./body";
+@use "./main";
+@use "./footer";
+@use "./section";
+
+@mixin use($rtl: false) {
+  @include body.use($rtl);
+}
