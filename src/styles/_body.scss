@@ -12,6 +12,9 @@ $main-fonts: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto,
     } @else {
       font-family: $main-fonts;
     }
+
+    margin: 0;
+    padding: 0;
     font-size: 1.25rem;
     line-height: 1.4;
   }
