@@ -37,6 +37,11 @@ select {
     padding: 10px;
     outline: none;
     width: 300px;
+
+    &:not(textarea, select) {
+      -webkit-appearance: textfield;
+      appearance: textfield;
+    }
   }
 
   input[type="submit"],
