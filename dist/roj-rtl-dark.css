@@ -29,6 +29,13 @@ main {
   margin-bottom: 20px;
 }
 
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
 section {
   width: 100%;
   height: 100vh;
@@ -36,6 +43,10 @@ section {
   align-items: center;
   justify-content: center;
   text-align: center;
+}
+
+p {
+  margin-bottom: 20px;
 }
 
 a,
@@ -48,6 +59,21 @@ a:hover,
 a:visited:hover {
   color: var(--dark);
   background-color: var(--color);
+}
+
+pre {
+  color: var(--dark-alt);
+  background-color: var(--light-alt);
+  direction: ltr;
+  overflow: scroll;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+pre ::selection {
+  color: var(--light-alt);
+  background-color: var(--dark-alt);
 }
 
 select {
@@ -66,30 +92,37 @@ input[type=range]:active {
   cursor: grabbing;
 }
 
-pre {
+label {
+  display: inline-block;
+  margin: 10px;
+}
+
+body {
+  color: var(--dark);
+  background-color: var(--light);
+  font-family: "Noto Sans Arabic", "Noto Naskh Arabic", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  margin: 0;
+  padding: 0;
+  font-size: 1.25rem;
+  line-height: 1.4;
+}
+body ::selection {
+  color: var(--light);
+  background-color: var(--dark);
+}
+
+blockquote {
   color: var(--dark-alt);
   background-color: var(--light-alt);
-  direction: ltr;
-  overflow: scroll;
-  padding-left: 10px;
-  padding-right: 10px;
-  border-top-right-radius: 10px;
+  margin: 0;
+  padding: 20px;
+  border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
+  border-right: 10px solid var(--dark-alt);
 }
-pre::selection {
+blockquote ::selection {
   color: var(--light-alt);
   background-color: var(--dark-alt);
-}
-
-p {
-  margin-bottom: 20px;
-}
-
-footer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
 }
 
 button {
@@ -106,7 +139,7 @@ button {
   cursor: pointer;
   text-transform: uppercase;
 }
-button::selection {
+button ::selection {
   color: var(--dark);
   background-color: var(--light);
 }
@@ -117,7 +150,7 @@ button:not(:disabled):hover {
   color: var(--dark);
   background-color: var(--light);
 }
-button:not(:disabled):hover::selection {
+button:not(:disabled):hover ::selection {
   color: var(--light);
   background-color: var(--dark);
 }
@@ -148,6 +181,23 @@ input[type=month] {
   outline: none;
   width: 300px;
 }
+textarea:not(textarea, select),
+select:not(textarea, select),
+input[type=text]:not(textarea, select),
+input[type=number]:not(textarea, select),
+input[type=password]:not(textarea, select),
+input[type=date]:not(textarea, select),
+input[type=time]:not(textarea, select),
+input[type=datetime]:not(textarea, select),
+input[type=email]:not(textarea, select),
+input[type=search]:not(textarea, select),
+input[type=url]:not(textarea, select),
+input[type=tel]:not(textarea, select),
+input[type=week]:not(textarea, select),
+input[type=month]:not(textarea, select) {
+  -webkit-appearance: textfield;
+  appearance: textfield;
+}
 
 input[type=submit],
 input[type=reset],
@@ -165,9 +215,9 @@ input[type=button] {
   cursor: pointer;
   text-transform: uppercase;
 }
-input[type=submit]::selection,
-input[type=reset]::selection,
-input[type=button]::selection {
+input[type=submit] ::selection,
+input[type=reset] ::selection,
+input[type=button] ::selection {
   color: var(--dark);
   background-color: var(--light);
 }
@@ -182,35 +232,9 @@ input[type=button]:not(:disabled):hover {
   color: var(--dark);
   background-color: var(--light);
 }
-input[type=submit]:not(:disabled):hover::selection,
-input[type=reset]:not(:disabled):hover::selection,
-input[type=button]:not(:disabled):hover::selection {
-  color: var(--light);
-  background-color: var(--dark);
-}
-
-blockquote {
-  color: var(--dark-alt);
-  background-color: var(--light-alt);
-  margin: 0;
-  padding: 20px;
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
-  border-right: 10px solid var(--dark-alt);
-}
-blockquote::selection {
-  color: var(--light-alt);
-  background-color: var(--dark-alt);
-}
-
-body {
-  color: var(--dark);
-  background-color: var(--light);
-  font-family: "Noto Sans Arabic", "Noto Naskh Arabic", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  font-size: 1.25rem;
-  line-height: 1.4;
-}
-body::selection {
+input[type=submit]:not(:disabled):hover ::selection,
+input[type=reset]:not(:disabled):hover ::selection,
+input[type=button]:not(:disabled):hover ::selection {
   color: var(--light);
   background-color: var(--dark);
 }
