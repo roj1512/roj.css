@@ -5,7 +5,7 @@
     color: vars.$dark-alt;
     background-color: vars.$light-alt;
 
-    &::selection {
+    ::selection {
       color: vars.$light-alt;
       background-color: vars.$dark-alt;
     }
@@ -13,7 +13,7 @@
     color: vars.$dark;
     background-color: vars.$light;
 
-    &::selection {
+    ::selection {
       color: vars.$light;
       background-color: vars.$dark;
     }
@@ -25,7 +25,7 @@
     color: vars.$light-alt;
     background-color: vars.$dark-alt;
 
-    &::selection {
+    ::selection {
       color: vars.$dark-alt;
       background-color: vars.$light-alt;
     }
@@ -33,7 +33,7 @@
     color: vars.$light;
     background-color: vars.$dark;
 
-    &::selection {
+    ::selection {
       color: vars.$dark;
       background-color: vars.$light;
     }
