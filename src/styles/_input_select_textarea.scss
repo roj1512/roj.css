@@ -1,0 +1,60 @@
+@use "../utils/vars";
+@use "../utils/mixins";
+
+select {
+  -webkit-appearance: none;
+}
+
+@mixin use($rtl: false) {
+  textarea,
+  select,
+  input[type="text"],
+  input[type="number"],
+  input[type="password"],
+  input[type="date"],
+  input[type="time"],
+  input[type="datetime"],
+  input[type="email"],
+  input[type="search"],
+  input[type="url"],
+  input[type="tel"],
+  input[type="week"],
+  input[type="month"] {
+    background-color: vars.$light-alt;
+    color: vars.$dark;
+    border-color: vars.$light-alt;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: vars.$border-radius;
+
+    @if $rtl {
+      margin-left: 6px;
+    } @else {
+      margin-right: 6px;
+    }
+
+    margin-bottom: 6px;
+    padding: 10px;
+    outline: none;
+    width: 300px;
+  }
+
+  input[type="submit"],
+  input[type="reset"],
+  input[type="button"] {
+    @include mixins.button($rtl);
+  }
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  cursor: pointer;
+}
+
+input[type="range"] {
+  cursor: grab;
+
+  &:active {
+    cursor: grabbing;
+  }
+}

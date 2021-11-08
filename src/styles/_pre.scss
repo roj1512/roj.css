@@ -1,0 +1,12 @@
+@use "../utils/mixins";
+@use "../utils/vars";
+
+pre {
+  @include mixins.dark-light(true);
+  direction: ltr;
+  overflow: scroll;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-top-right-radius: vars.$border-radius;
+  border-bottom-left-radius: vars.$border-radius;
+}

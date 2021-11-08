@@ -1,0 +1,71 @@
+@use "./vars";
+
+@mixin dark-light($alt: false) {
+  @if $alt {
+    color: vars.$dark-alt;
+    background-color: vars.$light-alt;
+
+    &::selection {
+      color: vars.$light-alt;
+      background-color: vars.$dark-alt;
+    }
+  } @else {
+    color: vars.$dark;
+    background-color: vars.$light;
+
+    &::selection {
+      color: vars.$light;
+      background-color: vars.$dark;
+    }
+  }
+}
+
+@mixin light-dark($alt: false) {
+  @if $alt {
+    color: vars.$light-alt;
+    background-color: vars.$dark-alt;
+
+    &::selection {
+      color: vars.$dark-alt;
+      background-color: vars.$light-alt;
+    }
+  } @else {
+    color: vars.$light;
+    background-color: vars.$dark;
+
+    &::selection {
+      color: vars.$dark;
+      background-color: vars.$light;
+    }
+  }
+}
+
+@mixin button($rtl: false) {
+  @include light-dark;
+  border: 2px solid vars.$dark;
+  font-family: inherit;
+  font-size: inherit;
+
+  @if $rtl {
+    margin-left: 6px;
+  } @else {
+    margin-right: 6px;
+  }
+
+  margin-bottom: 6px;
+  padding: 10px;
+  border-radius: vars.$border-radius;
+  outline: none;
+  cursor: pointer;
+  text-transform: uppercase;
+
+  &:not(:disabled) {
+    &:active {
+      transform: scale(1.1);
+    }
+
+    &:hover {
+      @include dark-light;
+    }
+  }
+}

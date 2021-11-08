@@ -1,0 +1,14 @@
+$dark: var(--dark);
+$dark-alt: var(--dark-alt);
+$light: var(--light);
+$light-alt: var(--light-alt);
+$color: var(--color);
+$border-radius: 10px;
+
+:root {
+  --dark: #222222;
+  --dark-alt: #333333;
+  --light: #eeeeee;
+  --light-alt: #cccccc;
+  --color: #1379ce;
+}

@@ -1,0 +1,17 @@
+@use "./all";
+@use "./body";
+@use "./main";
+@use "./section";
+@use "./a";
+@use "./blockquote";
+@use "./button";
+@use "./input_select_textarea";
+@use "./pre";
+@use "./p";
+@use "./footer";
+@use "./selection";
+
+@include button.use;
+@include input_select_textarea.use;
+@include blockquote.use;
+@include body.use;

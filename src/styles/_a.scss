@@ -1,0 +1,13 @@
+@use "../utils/vars";
+
+a,
+a:visited {
+  text-decoration: none;
+  color: vars.$color;
+  border-bottom: 1px solid vars.$color;
+
+  &:hover {
+    color: vars.$dark;
+    background-color: vars.$color;
+  }
+}

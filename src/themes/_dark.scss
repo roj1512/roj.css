@@ -1,0 +1,18 @@
+@mixin -theme {
+  :root {
+    --dark: #eeeeee;
+    --dark-alt: #cccccc;
+    --light: #222222;
+    --light-alt: #333333;
+  }
+}
+
+@mixin use($auto: false) {
+  @if $auto {
+    @media (prefers-color-scheme: dark) {
+      @include -theme;
+    }
+  } @else {
+    @include -theme;
+  }
+}

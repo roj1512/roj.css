@@ -1,0 +1,17 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Watch",
+      "type": "shell",
+      "command": "sass --watch src/:test/",
+      "group": "test"
+    },
+    {
+      "label": "Build",
+      "type": "shell",
+      "command": "sass src/:dist/ && sass src/roj.scss:dist/roj.min.css src/roj-rtl.scss:dist/roj-rtl.min.css src/roj-dark.scss:dist/roj-dark.min.css src/roj-rtl-dark.scss:dist/roj-rtl-dark.min.css src/roj-light.scss:dist/roj-light.min.css src/roj-rtl-light.scss:dist/roj-rtl-light.min.css --style compressed",
+      "group": "build"
+    }
+  ]
+}

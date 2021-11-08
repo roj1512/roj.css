@@ -1,0 +1,8 @@
+@use "../utils/vars";
+@use "../utils/mixins";
+
+@mixin use($rtl: false) {
+  button {
+    @include mixins.button($rtl);
+  }
+}

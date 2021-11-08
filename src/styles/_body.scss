@@ -1,0 +1,18 @@
+@use "../utils/mixins";
+
+$main-fonts: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto,
+  Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+
+@mixin use($rtl: false) {
+  body {
+    @include mixins.dark-light;
+
+    @if $rtl {
+      font-family: "Noto Sans Arabic", "Noto Naskh Arabic", $main-fonts;
+    } @else {
+      font-family: $main-fonts;
+    }
+    font-size: 1.25rem;
+    line-height: 1.4;
+  }
+}
