@@ -58,3 +58,8 @@ input[type="range"] {
     cursor: grabbing;
   }
 }
+
+label {
+  display: inline-block;
+  margin: 10px;
+}
