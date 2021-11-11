@@ -9,12 +9,12 @@
     padding: 20px;
 
     @if $rtl {
-      border-top-left-radius: 10px;
-      border-bottom-left-radius: 10px;
+      border-top-left-radius: vars.$border-radius;
+      border-bottom-left-radius: vars.$border-radius;
       border-right: 10px solid vars.$dark-alt;
     } @else {
-      border-top-right-radius: 10px;
-      border-bottom-right-radius: 10px;
+      border-top-right-radius: vars.$border-radius;
+      border-bottom-right-radius: vars.$border-radius;
       border-left: 10px solid vars.$dark-alt;
     }
   }
