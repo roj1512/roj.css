@@ -28,12 +28,12 @@ select {
     border-radius: vars.$border-radius;
 
     @if $rtl {
-      margin-left: 6px;
+      margin-left: vars.$margin;
     } @else {
-      margin-right: 6px;
+      margin-right: vars.$margin;
     }
 
-    margin-bottom: 6px;
+    margin-bottom: vars.$margin;
     padding: 10px;
     outline: none;
     width: 300px;
@@ -66,5 +66,5 @@ input[type="range"] {
 
 label {
   display: inline-block;
-  margin: 10px;
+  margin: vars.$margin;
 }
