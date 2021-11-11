@@ -2,6 +2,7 @@
 @use "./a";
 @use "./blockquote";
 @use "./pre";
+@use "./mark";
 
 @mixin use($rtl: false) {
   @include blockquote.use($rtl);
